@@ -1,7 +1,7 @@
 function calculateSum(a, b) {
     let sum = 0;
     while (a !== b + 1) {
-        if (a % 2 === 0) {
+        if (!(a % 2)) {
             sum += a;
         }
         a++;

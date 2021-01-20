@@ -1,9 +1,10 @@
 function ucFirst(str) {
-    if (!str.length) {
+    if (!str) {
         return str;
     }
+
     return str[0].toUpperCase() + str.slice(1);
 }
 
 console.log(ucFirst('hello'));
-console.log(ucFirst(''))
+console.log(ucFirst(''));
