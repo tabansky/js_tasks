@@ -1,7 +1,7 @@
-function getRandom(min, max) {
+const getRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min;
 }
-let n = getRandom(0, 9);
+const n = getRandom(0, 9);
 
 switch (n) {
     case 0:
