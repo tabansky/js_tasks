@@ -1,4 +1,4 @@
-function calculateSum(a, b) {
+const calculateSum = (a, b) => {
     let sum = 0;
     while (a !== b + 1) {
         if (!(a % 2)) {

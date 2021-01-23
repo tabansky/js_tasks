@@ -1,4 +1,4 @@
-function ucFirst(str) {
+const ucFirst = (str) => {
     if (!str) {
         return str;
     }

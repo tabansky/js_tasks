@@ -1,4 +1,4 @@
-function extractCurrencyValue(str) {
+const extractCurrencyValue = (str) => {
     let result = '';
 
     [...str].forEach(c => {
@@ -7,7 +7,7 @@ function extractCurrencyValue(str) {
         }
     });
 
-    return result;
+    return result.trim();
 }
 
-console.log(extractCurrencyValue('$120'))
+console.log(extractCurrencyValue('$  120'));
