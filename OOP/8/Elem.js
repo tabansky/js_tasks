@@ -13,18 +13,26 @@ class Elem {
 
     html(value) {
         this.elem.innerHTML = value.toString();
+
+        return this;
     }
 
     append(value) {
         this.elem.append(value.toString());
+
+        return this;
     }
 
     prepend(value) {
-        this.elem.prepend(value.toString())
+        this.elem.prepend(value.toString());
+
+        return this;
     }
 
     attr(attr, value) {
         this.elem.setAttribute(attr, value);
+
+        return this;
     }
 }
 
@@ -37,5 +45,5 @@ elem.attr('class', 'www');
 
 const elem2 = new Elem('test2');
 
-elem2.html('Hello').append('!').prepend('@');
+elem2.html('Hello').append('!').prepend('@').attr('class', 'www');
 

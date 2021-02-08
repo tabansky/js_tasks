@@ -58,7 +58,7 @@ class FormElement {
         }
 
         if (this.innerTxt) {
-            this.tag.innerText = this.innerTxt;
+            this.tag.value = this.innerTxt;
         }
     }
 
@@ -83,6 +83,6 @@ new FormElement('input', 'name', 'form', 'text', 'Имя', 'John', 'required');
 new FormElement('input', 'email', 'form', 'text', 'Е-мэйл', 'mail@mail.com', 'required|mail');
 new FormElement('input', 'age', 'form', 'text', 'Возраст', '62', 'required|min:10');
 new FormElement('input', 'birthdate', 'form', 'text', 'Дата рождения', '01.01.1970', 'required|date');
-new FormElement('button', 'submit', 'form', '', '', '', '', 'Сохранить');
+new FormElement('input', 'submit', 'form', 'button', '', '', '', 'Сохранить');
 
 FormElement.validate();
