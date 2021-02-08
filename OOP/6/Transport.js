@@ -1,5 +1,4 @@
 class Transport {
-    currentYear = new Date().getFullYear();
     model;
     price;
     year;
@@ -15,11 +14,11 @@ class Transport {
     }
 
     getAge() {
-        return this.currentYear - this.year;
+        return new Date().getFullYear() - this.year;
     }
 
     getMovement() {
-        return 'хз что!'
+        return this.model + ' движется';
     }
 }
 
