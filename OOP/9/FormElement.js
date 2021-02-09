@@ -72,8 +72,16 @@ class FormElement {
         }
 
         document.getElementById('submit').addEventListener('click', () => {
-            const children = document.querySelectorAll('form').children;
-            console.log(children)
+            const name = document.getElementById('name');
+            const age = document.getElementById('age');
+            const validateName = name && name.value ? false : name.style.border = '2px dashed red';
+            const validateAge = (age && Number(age.value) >= 10) ? false : age.style.border = '2px dashed red';
+
+            if (validateName || validateAge) {
+                return alert('Ошибка валидации');
+            }
+
+            return alert('Данные сохранены');
         });
     };
 }
