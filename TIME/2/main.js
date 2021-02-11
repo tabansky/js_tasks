@@ -11,9 +11,9 @@ const getCurrentTime = () => {
         `<span class="blue">${date.getSeconds()}</span>`;
 
     startBtn.addEventListener('click', getCurrentTime);
-    stopBtn.addEventListener('click', () => clearTimeout(rec));
+    stopBtn.addEventListener('click', () => clearTimeout(recursion));
 
-    const rec = setTimeout(getCurrentTime, 1000);
+    const recursion = setTimeout(getCurrentTime, 1000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
