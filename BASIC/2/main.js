@@ -4,6 +4,7 @@ const calculateSum = (a, b) => {
         if (!(a % 2)) {
             sum += a;
         }
+
         a++;
     }
 

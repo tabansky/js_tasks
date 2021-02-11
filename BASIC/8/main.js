@@ -2,7 +2,9 @@ const adminName = 'admin';
 const adminPass = 'password';
 
 const verifyAccount = (name, pass) => {
-    if (name === adminName && pass === adminPass) {
+    if (!name && !pass) {
+        console.log('Validation Error');
+    } else if (name === adminName && pass === adminPass) {
         console.log('Hello');
     } else if (name === adminName && !(pass === adminPass)) {
         console.log('Incorrect password');
@@ -10,8 +12,6 @@ const verifyAccount = (name, pass) => {
         console.log('Incorrect name');
     } else if (!(name === adminName) && !(pass === adminPass)) {
         console.log('Incorrect pass and name');
-    } else if (!name && !pass) {
-        console.log('Validation Error');
     } else {
         console.log('Unknown error');
     }
@@ -20,3 +20,5 @@ const verifyAccount = (name, pass) => {
 verifyAccount('admin', 'password');
 verifyAccount('sanea', '2000');
 verifyAccount('admin', '2000');
+verifyAccount('ss', 'password');
+verifyAccount('', '');
