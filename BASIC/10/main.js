@@ -1,5 +1,5 @@
 const dividers = (number) => {
-    let div = [];
+    const div = [];
 
     for (let i = 1; i <= Math.floor(number / 2); i++) {
         if (!(number % i)) {

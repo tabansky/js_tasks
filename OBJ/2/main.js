@@ -1,4 +1,4 @@
-let salaries = {
+const salaries = {
     John: 100,
     Ann: 160,
     Pete: 130
@@ -7,7 +7,7 @@ let salaries = {
 const getSum = (salaries) => {
     let sum = 0;
 
-    for (const key in salaries) {
+    for (const key of Object.keys(salaries)) {
         sum += salaries[key];
     }
 

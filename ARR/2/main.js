@@ -38,7 +38,7 @@ const showStudents = (students) => {
 }
 
 const getStudentAvgMarks = () => {
-    let studentAvgMarks = [];
+    const studentAvgMarks = [];
 
     students.forEach(student => {
         studentAvgMarks.push({name: student.name, mark: marks(student)});
@@ -48,7 +48,7 @@ const getStudentAvgMarks = () => {
 }
 
 const getAllMarks = () => {
-    let allMarks = [];
+    const allMarks = [];
 
     students.forEach(student => {
         allMarks.push(marks(student));
@@ -68,7 +68,7 @@ const getAvgOfGroup = () => {
 }
 
 const getBadStudents = () => {
-    let badStudents = [];
+    const badStudents = [];
 
     students.forEach(student => {
         if (marks(student) < 5) {
@@ -80,7 +80,7 @@ const getBadStudents = () => {
 }
 
 const getAboveAverage = () => {
-    let aboveAverage = [];
+    const aboveAverage = [];
 
     students.forEach (student => {
         if (marks(student) > Number(getAvgOfGroup())) {
