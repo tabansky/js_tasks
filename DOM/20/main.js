@@ -22,7 +22,7 @@ const listenToDel = () => {
     deleteButtons = document.querySelectorAll('.close');
 
     deleteButtons.forEach((btn, index) => {
-        deleteButtons[index].addEventListener('click', (e) => {
+        deleteButtons[index].addEventListener('click', () => {
             btn.parentElement.remove();
         })
     });
