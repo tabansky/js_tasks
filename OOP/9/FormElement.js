@@ -1,13 +1,4 @@
 class FormElement {
-    type;
-    id;
-    placeholder;
-    value;
-    rules;
-    tag;
-    parentId;
-    innerTxt;
-
     constructor(tag, id, parentId = '', type = '', placeholder = '', value = '', rules = '', innerTxt = '') {
         this.tag = tag;
         this.type = type;

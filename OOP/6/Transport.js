@@ -1,8 +1,4 @@
 class Transport {
-    model;
-    price;
-    year;
-
     constructor(model, price, year) {
         this.model = model;
         this.price = price;

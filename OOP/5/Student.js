@@ -3,7 +3,6 @@ const User = require("./User");
 
 class Student extends User {
     currentYear = new Date().getFullYear();
-    year;
 
     constructor(name, surname, year) {
         super(name, surname);

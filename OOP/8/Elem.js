@@ -1,6 +1,4 @@
 class Elem {
-    elem;
-
     constructor(id) {
         if (!document.getElementById(id.toString())) {
             const div = document.createElement('div');

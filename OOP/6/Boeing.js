@@ -1,9 +1,7 @@
 const Airbus = require("./Airbus");
 
 
-class Boeing extends Airbus{
-    mark;
-
+class Boeing extends Airbus {
     constructor(model, price, year, numOfTurbine, typeOfAirplane, mark) {
         super(model, price, year, numOfTurbine, typeOfAirplane);
         this.mark = mark;

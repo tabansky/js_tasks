@@ -1,7 +1,4 @@
 class Animal {
-    food;
-    location;
-
     constructor(food, location) {
         this.food = food;
         this.location = location;

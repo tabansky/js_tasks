@@ -3,7 +3,6 @@ const Animal = require("./Animal");
 
 class Horse extends Animal {
     animalType = 'Лошадь';
-    animalName;
 
     constructor(food, location, animalName) {
         super(food, location);
