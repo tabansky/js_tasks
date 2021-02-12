@@ -26,11 +26,6 @@ const students =
         },
     ];
 
-let studentAvgMarks = [];
-let badStudents = [];
-let allMarks = [];
-let avgOfGroup = 0;
-let aboveAverage = [];
 
 const marks = (student) => {
     return student.marks.reduce((accumulator, value) => (accumulator + value)) / student.marks.length;
@@ -42,34 +37,78 @@ const showStudents = (students) => {
     });
 }
 
-students.forEach(student => {
-    studentAvgMarks.push({name: student.name, mark: marks(student)});
-    allMarks.push(marks(student));
-    avgOfGroup = (allMarks.reduce((accumulator, value) => (accumulator + value)) / allMarks.length).toFixed(2);
+const getStudentAvgMarks = () => {
+    let studentAvgMarks = [];
 
-    if (marks(student) < 5) {
-        badStudents.push({name: student.name, mark: marks(student)});
-    }
-});
+    students.forEach(student => {
+        studentAvgMarks.push({name: student.name, mark: marks(student)});
+    });
 
-students.forEach (student => {
-    if (marks(student) > Number(avgOfGroup)) {
-        aboveAverage.push({name: student.name, mark: marks(student)});
-    }
-});
+    return studentAvgMarks;
+}
+
+const getAllMarks = () => {
+    let allMarks = [];
+
+    students.forEach(student => {
+        allMarks.push(marks(student));
+    });
+
+    return allMarks;
+}
+
+const sortStudentAvgMarks = () => {
+    return getStudentAvgMarks().sort((a, b) => b.mark - a.mark);
+}
+
+const getAvgOfGroup = () => {
+    const allMarks = getAllMarks();
+
+    return (allMarks.reduce((accumulator, value) => (accumulator + value)) / allMarks.length).toFixed(2);
+}
+
+const getBadStudents = () => {
+    let badStudents = [];
+
+    students.forEach(student => {
+        if (marks(student) < 5) {
+            badStudents.push({name: student.name, mark: marks(student)});
+        }
+    });
+
+    return badStudents;
+}
+
+const getAboveAverage = () => {
+    let aboveAverage = [];
+
+    students.forEach (student => {
+        if (marks(student) > Number(getAvgOfGroup())) {
+            aboveAverage.push({name: student.name, mark: marks(student)});
+        }
+    });
+
+    return aboveAverage;
+}
+
+const getMaxMinAvg = () => {
+    const allMarks = getAllMarks();
+
+    return [Math.max(...allMarks), Math.min(...allMarks)];
+}
 
 console.log('Студенты и их средние оценки:');
-showStudents(studentAvgMarks);
+showStudents(getStudentAvgMarks());
 
 console.log('\nПлохие студенты:');
-showStudents(badStudents);
+showStudents(getBadStudents());
 
 console.log('\nСортировка по оценкам: ');
-studentAvgMarks = studentAvgMarks.sort((a, b) => b.mark - a.mark);
-showStudents(studentAvgMarks);
+showStudents(sortStudentAvgMarks());
 
 console.log('\nСтуденты чьи оценки выше средней группы: ');
-showStudents(aboveAverage);
+showStudents(getAboveAverage());
 
-console.log('\nMax average mark = ' + Math.max(...allMarks));
-console.log('Min average mark = ' + Math.min(...allMarks));
+const maxMinAvg = getMaxMinAvg();
+console.log('\nМаксимальная средняя оценка = ' + maxMinAvg[0]);
+console.log('Минимальная средняя оценка = ' + maxMinAvg[1]);

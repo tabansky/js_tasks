@@ -6,7 +6,9 @@ let menu = {
 
 
 const multiplyNumeric = (obj) => {
-    for (const key in obj) {
+    const keys = Object.keys(obj);
+
+    for (const key of keys) {
         if (!isNaN(obj[key])) {
             obj[key] = obj[key] * 2;
         }

@@ -21,15 +21,16 @@ const person2 = {
 }
 
 const getSameValues = (obj1, obj2) => {
-    const arr = {};
+    const keys = Object.keys(obj1);
+    const result = {};
 
-    for (const key in obj1) {
+    for (const key of keys) {
         if (obj1[key] === obj2[key]) {
-            arr[key] = obj1[key];
+            result[key] = obj1[key];
         }
     }
 
-    return arr;
+    return result;
 }
 
-console.log(getSameValues(person, person2))
+console.log(getSameValues(person, person2));

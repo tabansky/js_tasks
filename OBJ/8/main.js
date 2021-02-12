@@ -11,9 +11,10 @@ const weekDays = {
 const romTranslate = ['Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Simbata', 'Duminica'];
 
 const translate = (obj, translate) => {
+	const keys = Object.keys(obj);
 	let i = 0;
 
-	for (const key in obj) {
+	for (const key of keys) {
 		obj[key] = translate[i];
 		i++;
 	}

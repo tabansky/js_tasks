@@ -9,15 +9,15 @@ const weekDays = {
 
 };
 
-function swap(obj) {
-    const arr = {};
+const swap = (obj) => {
+    const result = {};
 
     Object.keys(obj).forEach(value => {
         const key = obj[value];
-        arr[key] = value;
+        result[key] = value;
     });
 
-    return arr;
-};
+    return result;
+}
 
 console.log(swap(weekDays));
