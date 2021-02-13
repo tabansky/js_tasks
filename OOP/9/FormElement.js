@@ -1,61 +1,33 @@
 class FormElement {
-    constructor(tag, id, parentId = '', type = '', placeholder = '', value = '', rules = '', innerTxt = '') {
-        this.tag = tag;
-        this.type = type;
-        this.parentId = parentId;
-        this.id = id;
-        this.placeholder = placeholder;
-        this.value = value;
-        this.rules = rules;
-        this.innerTxt = innerTxt;
+    constructor(obj, attributes = {}) {
+        this.obj = obj;
+        this.attributes = attributes;
         this.create();
     }
 
+    addToDOM(elem) {
+        return this.obj.parentId ?
+            document.getElementById(this.obj.parentId).appendChild(elem) : document.body.appendChild(elem);
+    }
+
     create() {
-        if (!document.getElementById(this.id)) {
-            const elem = document.createElement(this.tag);
+        if (!document.getElementById(this.obj.id)) {
+            const elem = document.createElement(this.obj.tag);
 
-            elem.setAttribute( 'id', this.id);
-
-            if (this.parentId) {
-                document.getElementById(this.parentId).appendChild(elem);
-            } else {
-                document.body.appendChild(elem);
-            }
-
-            this.tag = document.getElementById(this.id);
-            this.setAttributes();
-        } else {
-            this.tag = document.getElementById(this.id);
-            this.setAttributes();
+            elem.setAttribute( 'id', this.obj.id);
+            this.addToDOM(elem)
         }
+
+        this.setAttributes();
     };
 
     setAttributes() {
-        if (this.type) {
-            this.tag.setAttribute( 'type', this.type);
-        }
+        const tag = document.getElementById(this.obj.id);
 
-        if (this.placeholder) {
-            this.tag.setAttribute( 'placeholder', this.placeholder);
-        }
-
-        if (this.value) {
-            this.tag.setAttribute( 'value', this.value);
-        }
-
-        if (this.rules) {
-            this.tag.setAttribute( 'rules', this.rules);
-        }
-
-        if (this.innerTxt) {
-            this.tag.value = this.innerTxt;
+        for (const key of Object.keys(this.attributes)) {
+            tag.setAttribute( key, this.attributes[key]);
         }
     }
-
-    getValue() {
-        return this.tag.innerText;
-    };
 
     static validate() {
         if (!document.getElementById('submit')) {
@@ -65,8 +37,8 @@ class FormElement {
         document.getElementById('submit').addEventListener('click', () => {
             const name = document.getElementById('name');
             const age = document.getElementById('age');
-            const validateName = name && name.value ? false : name.style.border = '2px dashed red';
-            const validateAge = (age && Number(age.value) >= 10) ? false : age.style.border = '2px dashed red';
+            const validateName = name && name.value ? false : name.style.border = '2px solid red';
+            const validateAge = (age && Number(age.value) >= 10) ? false : age.style.border = '2px solid red';
 
             if (validateName || validateAge) {
                 return alert('Ошибка валидации');
@@ -77,11 +49,11 @@ class FormElement {
     };
 }
 
-new FormElement('form', 'form');
-new FormElement('input', 'name', 'form', 'text', 'Имя', 'John', 'required');
-new FormElement('input', 'email', 'form', 'text', 'Е-мэйл', 'mail@mail.com', 'required|mail');
-new FormElement('input', 'age', 'form', 'text', 'Возраст', '62', 'required|min:10');
-new FormElement('input', 'birthdate', 'form', 'text', 'Дата рождения', '01.01.1970', 'required|date');
-new FormElement('input', 'submit', 'form', 'button', '', '', '', 'Сохранить');
+new FormElement({tag: 'form', id: 'form'});
+new FormElement({tag: 'input', id: 'name', parentId: 'form'}, {type: 'text', placeholder: 'Имя', value: 'John', rules: 'required'});
+new FormElement({tag: 'input', id: 'email', parentId: 'form'}, {type: 'text', placeholder: 'Е-mail', value: 'mail@mail.com', rules: 'required|mail'});
+new FormElement({tag: 'input', id: 'age', parentId: 'form'}, {type: 'text', placeholder: 'Возраст', value: '62', rules: 'required|min:10'});
+new FormElement({tag: 'input', id: 'birthdate', parentId: 'form'}, {type: 'text', placeholder: 'Дата рождения', value: '01.01.1970', rules: 'required|date'});
+new FormElement({tag: 'input', id: 'submit', parentId: 'form'}, {type: 'button', value: 'Сохранить'});
 
 FormElement.validate();
