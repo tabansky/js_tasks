@@ -4,33 +4,39 @@ const changeBackGround = () => {
 };
 
 const addButton = () => {
-    document.body.innerHTML += `<button id="orange">Change to Orange</button>`;
+    const btn = document.createElement('button');
 
-    const orangeBtn = document.querySelector('#orange');
-
-    orangeBtn.style.width = 'auto';
-    orangeBtn.style.height = '20px';
-    orangeBtn.style.color = 'orange';
-
-    orangeBtn.addEventListener('click', () => {document.body.style.backgroundColor = 'orange'});
+    btn.setAttribute('id', 'orange');
+    btn.style.width = 'auto';
+    btn.style.height = '20px';
+    btn.style.color = 'orange';
+    btn.innerText = 'Orange';
+    document.body.appendChild(btn);
 }
 
 const addList = () => {
-    document.body.innerHTML += `<ol></ol>`;
-
-    const list = document.querySelector('ol');
+    const list = document.createElement('ol');
 
     for (let i = 1; i <= 20; i++) {
         if (i % 2) {
-            list.innerHTML += `<li style="background-color: purple;">${i}</li>`;
+            const li = document.createElement('li');
+            li.style.backgroundColor = 'purple';
+            list.append(li);
         } else {
-            list.innerHTML += `<li style="background-color: green;">${i}</li>`;
+            const li = document.createElement('li');
+            li.style.backgroundColor = 'green';
+            list.append(li);
         }
     }
+
+    document.body.appendChild(list);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     changeBackGround();
     addList();
     addButton();
+    document.getElementById('orange').addEventListener('click', () => {
+        document.body.style.backgroundColor = 'orange';
+    });
 });
