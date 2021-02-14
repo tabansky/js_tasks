@@ -1,0 +1,31 @@
+{
+  "fio": {
+    "name": "Ivan",
+    "surname": "Ivanov",
+    "middleName": "Ivanov"
+  },
+  "birthday": "10.10.1990",
+  "mobile": "+3736000000",
+  "address": {
+    "country": "Moldova",
+    "city": "Chisinau",
+    "street": "Pushkin"
+  },
+  "email": "address@mail.domain",
+  "sex": "Male",
+  "post": "Web-Programmer",
+  "dateStartWork": "22.08.2010",
+  "IDNP": "1234567890123",
+  "salary": "$2000",
+  "birthLocation": {
+    "country": "Moldova",
+    "city": "Chisinau"
+  },
+  "totalWorkExperience": 10,
+  "department": "Chisinau filial #10",
+  "phone": "+373255434",
+  "Schedule": {
+    "work": "from 8:00 to 17:00",
+    "dinner": "from 12:00 to 13:00"
+  }
+}

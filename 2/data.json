@@ -1,0 +1,53 @@
+{
+  "workers": [
+    {
+      "fio": {
+        "name": "Alex",
+        "surname": "Alex2",
+        "middleName": "Alex3"
+      },
+      "salary": "$900",
+      "Schedule": {
+        "work": "from 8:00 to 17:00",
+        "dinner": "from 12:00 to 13:00"
+      }
+    },
+    {
+      "fio": {
+        "name": "Andrew",
+        "surname": "Andrew2",
+        "middleName": "Andrew3"
+      },
+      "salary": "$700",
+      "Schedule": {
+        "work": "from 8:00 to 17:00",
+        "dinner": "from 12:00 to 13:00"
+      }
+    },
+    {
+      "fio": {
+        "name": "Maxim",
+        "surname": "Maxim2",
+        "middleName": "Maxim3"
+      },
+      "salary": "$1000",
+      "Schedule": {
+        "work": "from 8:00 to 17:00",
+        "dinner": "from 12:00 to 13:00"
+      }
+    },
+    {
+      "fio": {
+        "name": "Ivan",
+        "surname": "Ivan2",
+        "middleName": "Ivan3"
+      },
+      "salary": "$500",
+      "Schedule": {
+        "work": "from 8:00 to 17:00",
+        "dinner": "from 12:00 to 13:00"
+      }
+    }
+  ]
+}
+
