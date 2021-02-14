@@ -1,12 +1,12 @@
 const points = [{x: 1, y: 2}, {x: 3, y: 4}, {x: null, y: 4}, {x: 3, y: undefined}];
 
 const delFakePoints = (obj) => {
-    obj.forEach((value, index) => {
-        if (typeof (obj[index].x) !== 'number' || typeof (obj[index].y) !== 'number') {
-            obj.splice(index, index);
+    return obj.filter((value, index) => {
+        if (typeof (obj[index].x) === 'number' && typeof (obj[index].y) === 'number') {
+            return value;
         }
     });
 }
 
-delFakePoints(points);
-console.log(points);
+
+console.log(delFakePoints(points));

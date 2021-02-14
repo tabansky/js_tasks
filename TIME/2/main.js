@@ -12,10 +12,10 @@ const showCurrentTime = () => {
 }
 
 const events = () => {
-    let recursion = setInterval(showCurrentTime, 1000);
+    let interval = setInterval(showCurrentTime, 1000);
 
-    startBtn.addEventListener('click', () => recursion = setInterval(showCurrentTime, 1000));
-    stopBtn.addEventListener('click', () => clearInterval(recursion));
+    startBtn.addEventListener('click', () => interval = setInterval(showCurrentTime, 1000));
+    stopBtn.addEventListener('click', () => clearInterval(interval));
 }
 
 document.addEventListener('DOMContentLoaded', () => {

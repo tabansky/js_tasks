@@ -1,12 +1,12 @@
 const person = {
-    name: `Person`,
+    name: "Person",
     age: 123,
     salary: 1542.33,
     contacts: {
-        phone: `112`,
-        email: 'email@domain.com'
+        phone: "112",
+        email: "email@domain.com"
     },
-    address: `Moldova`,
+    address: "Moldova",
 
     get getName()  {
         return this.name;

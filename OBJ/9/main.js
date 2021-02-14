@@ -10,14 +10,7 @@ const weekDays = {
 };
 
 const swap = (obj) => {
-    const result = {};
-
-    Object.keys(obj).forEach(value => {
-        const key = obj[value];
-        result[key] = value;
-    });
-
-    return result;
+    return Object.fromEntries(Object.entries(obj).map(([key,value])=>[value,key]));
 }
 
 console.log(swap(weekDays));
