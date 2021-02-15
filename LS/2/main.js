@@ -1,6 +1,5 @@
 const todosTable = document.getElementById('todos');
 const input = document.getElementById('input');
-const sendBtn = document.getElementById('btn');
 const todoList = {};
 
 const showTodos = (id) => {
@@ -33,16 +32,14 @@ const saveInLocalStorage = () => {
     }
 }
 
-const addToList = () => {
-    sendBtn.addEventListener('click', () => {
-        if (input.value) {
-            showTodos(input.value);
-            saveInLocalStorage();
-            input.value = '';
-        }
+const addToList = (e) => {
+    if (e.key === 'Enter' && input.value) {
+        showTodos(input.value);
+        saveInLocalStorage();
+        input.value = '';
+    }
 
-        listenToDel();
-    });
+    listenToDel();
 };
 
 const listenToDel = () => {
@@ -53,11 +50,14 @@ const listenToDel = () => {
             btn.parentElement.remove();
             delete todoList[`${btn.id}`];
             saveInLocalStorage();
-        })
+        });
     });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
     loadFromLocalStorage();
-    addToList();
+    input.addEventListener('keydown', (e) => {
+        addToList(e);
+    });
+    listenToDel();
 });
