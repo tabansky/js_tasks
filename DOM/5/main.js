@@ -29,20 +29,13 @@ const setStyles = () => {
 }
 
 const disableBtn = () => {
-    if (value === '0') {
-        minusBtn.setAttribute("disabled", "disabled");
-    } else {
-        minusBtn.removeAttribute("disabled");
-    }
-
-    if (value === '9') {
-        plusBtn.setAttribute("disabled", "disabled");
-    } else {
-        plusBtn.removeAttribute("disabled");
-    }
+    const minus = value === '0' ?
+        minusBtn.setAttribute("disabled", "disabled") : minusBtn.removeAttribute("disabled");
+    const plus = value === '9' ?
+        plusBtn.setAttribute("disabled", "disabled") : plusBtn.removeAttribute("disabled");
 }
 
-const changeValue = () => {
+const changeValueEvents = () => {
     minusBtn.addEventListener('click', () => {
         if (Number(display.value) > 0) {
             display.value = Number(display.value) - 1;
@@ -63,5 +56,5 @@ const changeValue = () => {
 document.addEventListener('DOMContentLoaded', () => {
     setStyles();
     setStandardValue();
-    changeValue();
+    changeValueEvents();
 });

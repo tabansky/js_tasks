@@ -3,7 +3,7 @@ const changeBackGround = () => {
     setTimeout(() => document.body.style.backgroundColor = 'green', 3000);
 };
 
-const addButton = () => {
+const addStylizedButton = () => {
     const btn = document.createElement('button');
 
     btn.setAttribute('id', 'orange');
@@ -18,15 +18,10 @@ const addList = () => {
     const list = document.createElement('ol');
 
     for (let i = 1; i <= 20; i++) {
-        if (i % 2) {
-            const li = document.createElement('li');
-            li.style.backgroundColor = 'purple';
-            list.append(li);
-        } else {
-            const li = document.createElement('li');
-            li.style.backgroundColor = 'green';
-            list.append(li);
-        }
+        const li = document.createElement('li');
+
+        li.style.backgroundColor = i % 2 ? 'purple' : 'green';
+        list.append(li);
     }
 
     document.body.appendChild(list);
@@ -35,7 +30,7 @@ const addList = () => {
 document.addEventListener('DOMContentLoaded', () => {
     changeBackGround();
     addList();
-    addButton();
+    addStylizedButton();
     document.getElementById('orange').addEventListener('click', () => {
         document.body.style.backgroundColor = 'orange';
     });
