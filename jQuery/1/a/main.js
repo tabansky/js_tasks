@@ -86,3 +86,8 @@ $('ol li:last').css('color', 'red');
 $('ol li:eq(9)').css('color', 'red');
 
 // 30
+$('li:odd').css('color', 'red');
+
+// 31
+$('li:even').css('color', 'red');
+
