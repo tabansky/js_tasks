@@ -53,3 +53,4 @@ $('.test').parent();
 $('b').parents().css('color', 'red');
 
 // 19
+$('b').closest('div').css('color', 'red');
