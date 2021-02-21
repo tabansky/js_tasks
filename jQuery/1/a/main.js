@@ -33,3 +33,8 @@ $('h2:not(.test)').css('color', 'red');
 
 // 12
 $(':header:not(.test)').css('color', 'red');
+
+// 13
+$(':header + :header').css('color', 'red');
+
+// 14
