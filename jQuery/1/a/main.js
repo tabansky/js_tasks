@@ -74,4 +74,7 @@ $('li:gt(8)').css('color', 'red');
 $('li:first').css('color', 'red');
 
 // 26
+$('li:last').css('color', 'red');
+
+// 27
 
