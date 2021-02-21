@@ -80,3 +80,6 @@ $('li:last').css('color', 'red');
 $('ol li:first').css('color', 'red');
 
 // 28
+$('ol li:last').css('color', 'red');
+
+// 29
