@@ -62,3 +62,4 @@ $('h2 > i').css('color', 'red');
 $('li:eq(3)').css('color', 'red');
 
 // 22
+$('li:gt(9)').css('color', 'red');
