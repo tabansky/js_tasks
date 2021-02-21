@@ -38,3 +38,9 @@ $(':header:not(.test)').css('color', 'red');
 $(':header + :header').css('color', 'red');
 
 // 14
+$(':header.test + :header.test').css('color', 'red');
+
+// 15
+$(':empty').css('color', 'red');
+
+
