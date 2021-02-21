@@ -26,3 +26,6 @@ $('.test').next();
 $('.test').prev();
 
 // 10
+$('.test').nextAll();
+
+// 11
