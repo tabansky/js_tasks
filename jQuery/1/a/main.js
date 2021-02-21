@@ -18,3 +18,6 @@ $('p + p').css('color', 'red');
 
 // 7
 $('li + li.www').css('color', 'red');
+
+// 8
+$('h2 i').css('color', 'red');
