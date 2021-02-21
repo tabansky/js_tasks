@@ -47,3 +47,6 @@ $(':empty').css('color', 'red');
 $('p:first').css('color', 'red');
 
 // 17
+$('p:last').css('color', 'red');
+
+// 18
