@@ -98,3 +98,6 @@ $('ol li:odd').css('color', 'red');
 $('ol li:even').css('color', 'red');
 
 // 34
+$('li.www').parent().css('color', 'red');
+
+// 35
