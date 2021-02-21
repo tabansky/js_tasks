@@ -111,3 +111,9 @@ $(':header').each(function () {
 });
 
 // 37
+$('li').each(function (index) {
+    alert($(this).html(index));
+});
+
+// 38
+$()
