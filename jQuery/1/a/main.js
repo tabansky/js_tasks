@@ -17,3 +17,4 @@ $('h2.test').css('color', 'red');
 $('p + p').css('color', 'red');
 
 // 7
+$('li + li.www').css('color', 'red');
