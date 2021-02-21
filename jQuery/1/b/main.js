@@ -29,3 +29,6 @@ $('.test').prev();
 $('.test').nextAll();
 
 // 11
+$('.test').prevAll();
+
+// 12
