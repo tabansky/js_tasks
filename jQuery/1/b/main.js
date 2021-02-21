@@ -62,3 +62,7 @@ $('h2.www').css('color', 'red').find('.test').css('font-size', '30px');
 $('.www').css('color', 'red').find('p').append('!');
 
 // 22
+$('p.www').prepend('!').append('!!').add('h2').css('color', 'red');
+
+// 23
+$('h2').is('h2.test');
