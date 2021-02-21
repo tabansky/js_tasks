@@ -29,4 +29,6 @@ $('h2 > i').css('color', 'red');
 $(':header').css('color', 'red');
 
 // 11
-$()
+$('h2:not(.test)').css('color', 'red');
+
+// 12
