@@ -68,4 +68,6 @@ $('li:gt(9)').css('color', 'red');
 $('li:lt(9)').css('color', 'red');
 
 // 24
+$('li:gt(8)').css('color', 'red');
 
+// 25
