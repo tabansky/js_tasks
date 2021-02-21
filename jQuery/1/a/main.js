@@ -103,7 +103,11 @@ $('li.www').parent().css('color', 'red');
 // 35
 $('p').each(function () {
     alert($(this).html());
-})
+});
 
 // 36
-$
+$(':header').each(function () {
+    alert($(this).html());
+});
+
+// 37
