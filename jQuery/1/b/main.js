@@ -54,3 +54,9 @@ $('b').parents().css('color', 'red');
 
 // 19
 $('b').closest('div').css('color', 'red');
+
+// 20
+$('h2.www').css('color', 'red').find('.test').css('font-size', '30px');
+
+// 21
+$()
