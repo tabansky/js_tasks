@@ -50,3 +50,6 @@ $('li.www').siblings(':not(.test)');
 $('.test').parent();
 
 // 18
+$('b').parents().css('color', 'red');
+
+// 19
