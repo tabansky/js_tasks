@@ -32,3 +32,4 @@ $('.test').nextAll();
 $('.test').prevAll();
 
 // 12
+$('.www').nextUntil('.test');
