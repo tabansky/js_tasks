@@ -59,4 +59,6 @@ $('b').closest('div').css('color', 'red');
 $('h2.www').css('color', 'red').find('.test').css('font-size', '30px');
 
 // 21
-$()
+$('.www').css('color', 'red').find('p').append('!');
+
+// 22
