@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
 <p>1</p>
@@ -36,6 +47,23 @@
     <li></li>
     <li></li>
 </ul>
+<button>add</button>
+
+<br>
+
+<table style="width:40%">
+    <caption>Users</caption>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+    </tr>
+    <tr>
+        <td>Ivan</td>
+        <td>Ivanov</td>
+    </tr>
+</table>
+<input id="name" type="text" placeholder="name">
+<input id="surname" type="text" placeholder="surname">
 <button>add</button>
 
 <script src="main.js"></script>

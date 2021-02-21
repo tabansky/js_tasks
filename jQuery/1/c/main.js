@@ -51,4 +51,18 @@ $('ul').on('click', 'li', function () {
     $(this).append('!');
 }).next().on('click', function () {
     $(this).prev().children().last().after('<li>пункт</li>');
-})
+});
+
+// 12
+$('table').on('click', 'td', function () {
+    $(this).html(prompt());
+}).nextAll('button').on('click', function () {
+    $(this).prevAll('table').children().last().after(
+        '<tr>\n' +
+            '<td>'+ $(this).prevAll('#name').val() +'</td>\n' +
+            '<td>'+ $(this).prevAll('#surname').val() +'</td>\n' +
+        '</tr>'
+    );
+});
+
+
