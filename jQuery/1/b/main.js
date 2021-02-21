@@ -33,3 +33,8 @@ $('.test').prevAll();
 
 // 12
 $('.www').nextUntil('.test');
+
+// 13
+$('.test').prevUntil('.www');
+
+// 14
