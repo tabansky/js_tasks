@@ -63,3 +63,9 @@ $('li:eq(3)').css('color', 'red');
 
 // 22
 $('li:gt(9)').css('color', 'red');
+
+// 23
+$('li:lt(9)').css('color', 'red');
+
+// 24
+
