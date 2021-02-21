@@ -66,3 +66,12 @@ $('p.www').prepend('!').append('!!').add('h2').css('color', 'red');
 
 // 23
 $('h2').is('h2.test');
+
+// 24
+$(':header').nextAll().each(function () {
+    if ($(this).is('p')) {
+        $(this).append($(':header').html());
+    }
+});
+
+// 25
