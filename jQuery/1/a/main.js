@@ -53,3 +53,7 @@ $('p:last').css('color', 'red');
 $('li:contains("пункт")').css('color', 'red');
 
 // 19
+$('h2:has(i)').css('color', 'red');
+
+// 20
+
