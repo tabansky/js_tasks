@@ -101,3 +101,9 @@ $('ol li:even').css('color', 'red');
 $('li.www').parent().css('color', 'red');
 
 // 35
+$('p').each(function () {
+    alert($(this).html());
+})
+
+// 36
+$
