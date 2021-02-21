@@ -75,3 +75,8 @@ $(':header').nextAll().each(function () {
 });
 
 // 25
+$(':header').nextAll().each(function () {
+    if (!$(this).is('p')) {
+        $(':header').after('<p>'+$(':header').html()+'</p>');
+    }
+});
