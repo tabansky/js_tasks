@@ -43,4 +43,7 @@ $(':header.test + :header.test').css('color', 'red');
 // 15
 $(':empty').css('color', 'red');
 
+// 16
+$('p:first').css('color', 'red');
 
+// 17
