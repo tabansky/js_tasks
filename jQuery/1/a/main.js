@@ -11,3 +11,6 @@ $('h2').css({'color': 'blue', 'font-size': '30px'});
 $('.test').css('color', 'red');
 
 // 5
+$('h2.test').css('color', 'red');
+
+// 6
