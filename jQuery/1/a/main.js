@@ -50,3 +50,6 @@ $('p:first').css('color', 'red');
 $('p:last').css('color', 'red');
 
 // 18
+$('li:contains("пункт")').css('color', 'red');
+
+// 19
