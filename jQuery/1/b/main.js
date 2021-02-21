@@ -20,4 +20,6 @@ $('li').slice(2, 10);
 $('li').filter('.www');
 
 // 8
+$('.test').next();
 
+// 9
