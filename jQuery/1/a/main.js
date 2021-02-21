@@ -77,4 +77,6 @@ $('li:first').css('color', 'red');
 $('li:last').css('color', 'red');
 
 // 27
+$('ol li:first').css('color', 'red');
 
+// 28
