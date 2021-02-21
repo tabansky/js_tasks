@@ -59,7 +59,7 @@ $('h2:has(i)').css('color', 'red');
 $('h2 > i').css('color', 'red');
 
 // 21
-$('li:eq(3)').css('color', 'red');
+$('li:eq(2)').css('color', 'red');
 
 // 22
 $('li:gt(9)').css('color', 'red');
@@ -83,3 +83,6 @@ $('ol li:first').css('color', 'red');
 $('ol li:last').css('color', 'red');
 
 // 29
+$('ol li:eq(9)').css('color', 'red');
+
+// 30
