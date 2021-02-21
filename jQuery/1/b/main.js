@@ -47,4 +47,6 @@ $('li.www').siblings('.test');
 $('li.www').siblings(':not(.test)');
 
 // 17
+$('.test').parent();
 
+// 18
