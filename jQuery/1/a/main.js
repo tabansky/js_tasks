@@ -8,4 +8,6 @@ $('h3').css('color', 'red');
 $('h2').css({'color': 'blue', 'font-size': '30px'});
 
 // 4
-$()
+$('.test').css('color', 'red');
+
+// 5
