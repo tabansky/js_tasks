@@ -116,4 +116,6 @@ $('li').each(function (index) {
 });
 
 // 38
-$()
+$('li').each(function (index) {
+    alert($(this).append(index));
+})
