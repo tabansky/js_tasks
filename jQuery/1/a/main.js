@@ -71,3 +71,7 @@ $('li:lt(9)').css('color', 'red');
 $('li:gt(8)').css('color', 'red');
 
 // 25
+$('li:first').css('color', 'red');
+
+// 26
+
