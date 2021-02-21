@@ -43,3 +43,8 @@ $('li.www').siblings();
 // 15
 $('li.www').siblings('.test');
 
+// 16
+$('li.www').siblings(':not(.test)');
+
+// 17
+
