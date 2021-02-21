@@ -23,3 +23,6 @@ $('li').filter('.www');
 $('.test').next();
 
 // 9
+$('.test').prev();
+
+// 10
