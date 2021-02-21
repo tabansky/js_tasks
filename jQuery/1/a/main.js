@@ -91,3 +91,7 @@ $('li:odd').css('color', 'red');
 // 31
 $('li:even').css('color', 'red');
 
+// 32
+$('ol li:odd').css('color', 'red');
+
+
