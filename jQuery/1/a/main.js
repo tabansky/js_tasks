@@ -59,4 +59,6 @@ $('h2:has(i)').css('color', 'red');
 $('h2 > i').css('color', 'red');
 
 // 21
-$()
+$('li:eq(3)').css('color', 'red');
+
+// 22
