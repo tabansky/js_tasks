@@ -94,4 +94,7 @@ $('li:even').css('color', 'red');
 // 32
 $('ol li:odd').css('color', 'red');
 
+// 33
+$('ol li:even').css('color', 'red');
 
+// 34
