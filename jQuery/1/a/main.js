@@ -56,4 +56,7 @@ $('li:contains("пункт")').css('color', 'red');
 $('h2:has(i)').css('color', 'red');
 
 // 20
+$('h2 > i').css('color', 'red');
 
+// 21
+$()
