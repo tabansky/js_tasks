@@ -39,3 +39,7 @@ $('.test').prevUntil('.www');
 
 // 14
 $('li.www').siblings();
+
+// 15
+$('li.www').siblings('.test');
+
