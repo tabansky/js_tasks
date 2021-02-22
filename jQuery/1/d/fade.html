@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#hide').on('click', function () {
+                $('#block').fadeOut(1000);
+                return false;
+            });
+
+            $('#show').on('click', function () {
+                $('#block').fadeIn(1000);
+                return false;
+            });
+
+            $('#darken').on('click', function () {
+                $('#block').fadeTo(500, 0.5);
+                return false;
+            });
+
+            $('#undarken').on('click', function () {
+                $('#block').fadeTo(500, 1);
+                return false;
+            });
+        })
+    </script>
+</head>
+<body>
+
+<p>
+    <a id="hide" href>убрать</a>
+    <a id="show" href>показать</a>
+    <a id="darken" href>затемнить</a>
+    <a id="undarken" href>оттемнить</a>
+</p>
+
+<div id="block" style="border: 1px black solid; width: 140px">
+    <ol>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+    </ol>
+</div>
+</body>
+</html>
