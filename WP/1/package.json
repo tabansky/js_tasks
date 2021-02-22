@@ -1,0 +1,15 @@
+{
+  "name": "alex_tabanschi",
+  "version": "1.2.3",
+  "description": "wp",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TabanschiAlex"
+  },
+  "author": "Alexandr Tabanschi",
+  "license": "ISC"
+}
