@@ -1,12 +1,14 @@
 $('#btn').on('click', function () {
-    if ($('#input').val()) {
+    const value = $('#input');
+
+    if (value.val()) {
         $('#users').children().last().after(
             '<tr>\n' +
-                '<td>' + $('#input').val() + '</td><td class="close">&#10006;</td>' +
+                '<td>' + value.val() + '</td><td class="close">&#10006;</td>' +
              '</tr>'
         );
 
-        $('#input').val('');
+        value.val('');
     }
 });
 
