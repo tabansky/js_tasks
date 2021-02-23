@@ -37,7 +37,7 @@ const dragAndDrop = () => {
             child.onmouseup = null;
         });
     });
-
+//todo использовать addEve...
     child.ondragstart = () => {
         return false;
     };

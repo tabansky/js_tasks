@@ -9,7 +9,8 @@ const generateTable = () => {
         numbers.forEach((number, i) => {
             const td = document.createElement('td');
 
-            if (((index % 2) && !(i % 2)) || (!(index % 2) && (i % 2))) {
+            if ((index + i) % 2) {
+                console.log(index + i);
                 td.style.backgroundColor = 'brown';
             }
 

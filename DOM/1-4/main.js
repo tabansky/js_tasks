@@ -17,6 +17,7 @@ const addStylizedButton = () => {
 const addList = () => {
     const list = document.createElement('ol');
 
+    //todo каждые 2 сек, передалать for
     for (let i = 1; i <= 20; i++) {
         const li = document.createElement('li');
 

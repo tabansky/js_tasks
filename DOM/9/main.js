@@ -27,5 +27,6 @@ const showNotification = (options) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // todo добавить timeout в option
     showNotification(options);
 });

@@ -2,7 +2,6 @@ const users = document.getElementById('users');
 const input = document.getElementById('input');
 const sendBtn = document.getElementById('btn');
 
-let deleteButtons;
 
 const addToList = () => {
     sendBtn.addEventListener('click', () => {
@@ -19,7 +18,7 @@ const addToList = () => {
 };
 
 const listenToDel = () => {
-    deleteButtons = document.querySelectorAll('.close');
+    const deleteButtons = document.querySelectorAll('.close');
 
     deleteButtons.forEach((btn, index) => {
         deleteButtons[index].addEventListener('click', () => {

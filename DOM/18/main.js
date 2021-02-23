@@ -7,9 +7,11 @@ const movePlayer = (e) => {
     let top = parseInt(stylesPlayer.marginTop);
     let left = parseInt(stylesPlayer.marginLeft);
 
+    // todo переписать
     switch (e.key) {
         case "ArrowLeft":
             if (left > 0) {
+                // todo конкат делать череез ``
                 player.style.marginLeft = left - 50 + "px";
             }
             break;
