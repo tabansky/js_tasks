@@ -5,7 +5,7 @@ const square = (x) => {
 }
 
 const convert = (fn, array) => {
-    return array.map(fn);
+    return array.map(value => value * value);
 }
 
 console.log(arr);

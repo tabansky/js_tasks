@@ -1,10 +1,14 @@
 const sumInputNumbers = (arr = [], data = +prompt('введите значение')) => {
-    if (!isNaN(data) && data) {
+    if (data) {
         arr.push(data);
         sumInputNumbers(arr);
     }
 
-    return arr.length ? arr.reduce((accumulator, value) => accumulator + value) : new Error('Пустой массив');
+    if (!arr.length) {
+        throw new Error('Пустой массив')
+    }
+
+    return arr.reduce((accumulator, value) => accumulator + value)
 }
 
 console.log(sumInputNumbers());

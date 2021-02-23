@@ -7,3 +7,4 @@ const c = getRandom(0, 100);
 
 console.log("Max: " + Math.max(a, b, c));
 console.log("Min: " + Math.min(a, b, c));
+// todo сделать без Math

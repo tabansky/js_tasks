@@ -10,6 +10,7 @@ const multiplyNumeric = (obj) => {
 
     for (const key of keys) {
         if (!isNaN(obj[key])) {
+            // todo goto 1 todo
             obj[key] = obj[key] * 2;
         }
     }
