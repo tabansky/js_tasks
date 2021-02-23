@@ -1,8 +1,7 @@
 const div = document.getElementById('result');
 
 const serverResponse = () => {
-        const data = 'server answer';
-        return data;
+    return 'server answer';
 };
 
 const userRequest = new Promise((resolve, reject) => {
@@ -11,7 +10,6 @@ const userRequest = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(serverResponse());
     }, 2000)
-
 });
 
 document.addEventListener('DOMContentLoaded', () => {

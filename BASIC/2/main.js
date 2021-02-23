@@ -1,16 +1,19 @@
 const calculateSum = (a, b) => {
     let sum = 0;
 
-    while (a !== b + 1) {
+    do {
         if (!(a % 2)) {
             sum += a;
         }
 
-        //todo запрещено меня пераметры функции
         a++;
-    }
+    } while (!(a > b));
 
     return sum;
+
+/*
+    return Array.from({length: b},(_, i) => i + 1).slice(a - 1).filter(n => !(n % 2)).reduce((acc, val) => acc + val);
+*/
 }
 
 console.log(calculateSum(2, 10));

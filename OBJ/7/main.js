@@ -8,31 +8,31 @@ const person = {
     },
     address: "Moldova",
 
-    get getName()  {
+    getName() {
         return this.name;
     },
 
-    get getAge()  {
+    getAge() {
         return this.age;
     },
 
-    get getSalary()  {
+    getSalary() {
         return this.salary;
     },
 
-    get getPhone()  {
+    getPhone() {
         return this.contacts.phone;
     },
 
-    get getMail()  {
+    getMail() {
         return this.contacts.email;
     },
 
-    get getAddress()  {
+    getAddress() {
         return this.address;
     }
 };
 
-console.log(person.getName, person.getAge, person.getSalary, person.getPhone, person.getMail, person.getAddress);
+console.log(person.getName(), person.getAge(), person.getSalary(), person.getPhone(), person.getMail(), person.getAddress());
 
 

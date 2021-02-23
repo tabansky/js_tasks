@@ -4,5 +4,4 @@ const delFakePoints = (obj) => {
     return obj.filter((value, index) => typeof (obj[index].x) === 'number' && typeof (obj[index].y) === 'number');
 }
 
-
 console.log(delFakePoints(points));

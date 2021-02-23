@@ -4,17 +4,17 @@ const menu = {
     title: "My menu"
 };
 
-
 const multiplyNumeric = (obj) => {
-    const keys = Object.keys(obj);
+    const newObj = {...obj};
+    const keys = Object.keys(newObj);
 
     for (const key of keys) {
-        if (!isNaN(obj[key])) {
-            // todo goto 1 todo
-            obj[key] = obj[key] * 2;
+        if (Number(newObj[key])) {
+            newObj[key] = newObj[key] * 2;
         }
     }
+
+    return newObj;
 }
 
-multiplyNumeric(menu);
-console.log(menu)
+console.log(multiplyNumeric(menu));

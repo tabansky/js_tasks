@@ -1,13 +1,5 @@
 const extractCurrencyValue = (str) => {
-    let result = '';
-
-    [...str].forEach(c => {
-        if (!isNaN(c)) {
-            result += c;
-        }
-    });
-
-    return result.trim();
+    return [...str].filter(c => !isNaN(c)).join('').trim();
 }
 
-console.log(extractCurrencyValue('$  120'));
+console.log(extractCurrencyValue('$  120  '));

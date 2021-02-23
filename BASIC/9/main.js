@@ -1,4 +1,4 @@
-const name = prompt('Введите имя: ');
+const name = prompt('Enter your name: ');
 
 alert(`Hello ${name}`);
 

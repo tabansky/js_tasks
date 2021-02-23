@@ -11,13 +11,15 @@ const weekDays = {
 const romTranslate = ['Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Simbata', 'Duminica'];
 
 const translate = (obj, translate) => {
-	const keys =  Object.keys(obj);
+	const newObj = {...obj};
+	const keys = Object.keys(newObj);
 
 	for (const key in keys) {
-		obj[keys[key]] = translate[key];
+		newObj[keys[key]] = translate[key];
 	}
+
+	return newObj;
 };
 
-translate(weekDays, romTranslate);
-console.log(weekDays);
+console.log(translate(weekDays, romTranslate));
 

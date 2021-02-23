@@ -34,5 +34,7 @@ switch (n) {
     case 9:
         console.log('девять');
         break;
-        // todo поставить default
+    default:
+        console.log('Число вне диапозона 0-9');
+        break;
 }
