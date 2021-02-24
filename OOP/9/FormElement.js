@@ -31,7 +31,7 @@ class FormElement {
 
     static validate() {
         if (!document.getElementById('submit')) {
-            return;
+            return false;
         }
 
         document.getElementById('submit').addEventListener('click', () => {
@@ -46,6 +46,8 @@ class FormElement {
 
             return alert('Данные сохранены');
         });
+
+        return true;
     };
 }
 
