@@ -4,25 +4,25 @@ const viewport = document.getElementById('viewport');
 const movePlayer = (e) => {
     const stylesPlayer = window.getComputedStyle(player);
     const arrows = {
-        'ArrowLeft': () => {
+        ArrowLeft() {
             if (left > 0) {
                 player.style.marginLeft = `${left - 50}px`;
             }
         },
 
-        'ArrowUp': () => {
+        ArrowUp() {
             if (top > 0) {
                 player.style.marginTop = `${top - 50}px`;
             }
         },
 
-        'ArrowRight': () => {
+        ArrowRight() {
             if (Number(left) < viewport.clientWidth - 50) {
                 player.style.marginLeft = `${left + 50}px`;
             }
         },
 
-        'ArrowDown': () => {
+        ArrowDown() {
             if (top < viewport.clientHeight - 50) {
                 player.style.marginTop = `${top + 50}px`;
             }
