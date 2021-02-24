@@ -1,12 +1,19 @@
 class Elem {
     constructor(id) {
-        if (!document.getElementById(id.toString())) {
+        this.id = id;
+        this.elem = this.createDiv();
+    }
+
+    createDiv() {
+        if (!document.getElementById(this.id.toString())) {
             const div = document.createElement('div');
-            div.setAttribute( 'id', id );
+            div.setAttribute( 'id', this.id );
             document.body.appendChild(div);
+
+            return div;
         }
 
-        this.elem = document.getElementById(id);
+        return document.getElementById(this.id);
     }
 
     html(value) {

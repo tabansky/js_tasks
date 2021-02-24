@@ -3,6 +3,7 @@ class FormElement {
         this.obj = obj;
         this.attributes = attributes;
         this.create();
+        this.setAttributes();
     }
 
     addToDOM(elem) {
@@ -18,7 +19,7 @@ class FormElement {
             this.addToDOM(elem)
         }
 
-        this.setAttributes();
+        return true;
     };
 
     setAttributes() {
@@ -27,6 +28,8 @@ class FormElement {
         for (const key of Object.keys(this.attributes)) {
             tag.setAttribute( key, this.attributes[key]);
         }
+
+        return true;
     }
 
     static validate() {
