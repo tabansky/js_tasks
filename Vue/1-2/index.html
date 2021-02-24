@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container">
+    <input v-on:input="calculateAge" type="date">
+
+    <br>
+    <span>Hello, {{ username }}</span>
+    <br>
+    <span v-if="age >= 0">You are {{ age }} years older.</span>
+    <span v-else-if="age < 0">You are from the future? Incredible!</span>
+</div>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app.js"></script>
+</body>
+</html>

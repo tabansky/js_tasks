@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container">
+    <h4>What language do you program in?</h4>
+    
+    <p v-for="(value, language) in languages">
+        <input name="language" type="radio" v-on:input="setCoefficient" v-bind:value="value">
+        {{ language }}
+    </p>
+    <p>Experience? <input type="number" v-on:input="calculateSalary"></p>
+    <p v-if="salary">Your salary is ${{ salary }}</p>
+</div>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app.js"></script>
+</body>
+</html>
