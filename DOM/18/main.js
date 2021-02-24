@@ -3,38 +3,39 @@ const viewport = document.getElementById('viewport');
 
 const movePlayer = (e) => {
     const stylesPlayer = window.getComputedStyle(player);
+    const arrows = {
+        'ArrowLeft': () => {
+            if (left > 0) {
+                player.style.marginLeft = `${left - 50}px`;
+            }
+        },
+
+        'ArrowUp': () => {
+            if (top > 0) {
+                player.style.marginTop = `${top - 50}px`;
+            }
+        },
+
+        'ArrowRight': () => {
+            if (Number(left) < viewport.clientWidth - 50) {
+                player.style.marginLeft = `${left + 50}px`;
+            }
+        },
+
+        'ArrowDown': () => {
+            if (top < viewport.clientHeight - 50) {
+                player.style.marginTop = `${top + 50}px`;
+            }
+        }
+    }
 
     let top = parseInt(stylesPlayer.marginTop);
     let left = parseInt(stylesPlayer.marginLeft);
 
-    // todo переписать
-    switch (e.key) {
-        case "ArrowLeft":
-            if (left > 0) {
-                // todo конкат делать череез ``
-                player.style.marginLeft = left - 50 + "px";
-            }
-            break;
 
-        case "ArrowUp":
-            if (top > 0) {
-                player.style.marginTop = top - 50 + "px";
-            }
-            break;
-
-        case "ArrowRight":
-            if (Number(left) < viewport.clientWidth - 50) {
-                player.style.marginLeft = left + 50 + "px";
-            }
-            break;
-
-        case "ArrowDown":
-            if (top < viewport.clientHeight - 50) {
-                player.style.marginTop = top + 50 + "px";
-            }
-            break;
+    if (arrows[e.key]) {
+        arrows[e.key]();
     }
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {

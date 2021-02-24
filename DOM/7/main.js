@@ -6,10 +6,10 @@ const links =
 
 const addLinks = () => {
     for (const link of links) {
-        document.querySelector('ul').innerHTML += `
-        <li>
-            <a href="${link}" style="color: ${link.includes('https://') ? 'red' : ''}" target="_blank">${link}</a>
-        </li>`;
+        document.querySelector('ul').innerHTML +=
+            `<li>
+                <a href="${link}" style="color: ${link.includes('https://') ? 'red' : ''}" target="_blank">${link}</a>
+            </li>`;
     }
 };
 

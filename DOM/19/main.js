@@ -3,8 +3,8 @@ const parentLeft = document.getElementById('parent-left');
 const parentRight = document.getElementById('parent-right');
 
 const moveAt = (pageX, pageY, shiftX, shiftY) => {
-    child.style.left = pageX - shiftX + 'px';
-    child.style.top = pageY - shiftY + 'px';
+    child.style.left = `${pageX - shiftX}px`;
+    child.style.top = `${pageY - shiftY}px`;
 }
 
 const dragAndDrop = () => {
@@ -37,10 +37,10 @@ const dragAndDrop = () => {
             child.onmouseup = null;
         });
     });
-//todo использовать addEve...
-    child.ondragstart = () => {
+
+    child.addEventListener('ondragstart', () => {
         return false;
-    };
+    });
 };
 
 document.addEventListener('DOMContentLoaded', () => {

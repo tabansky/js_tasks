@@ -4,7 +4,8 @@ const options = {
     top: '10px',
     right: '10px',
     message: 'Hello world',
-    className: 'test'
+    className: 'test',
+    timeout: 1500
 };
 
 const setStyles = () => {
@@ -23,10 +24,9 @@ const setStyles = () => {
 const showNotification = (options) => {
     page.innerHTML = `<div class="notification ${options.className}">${options.message}</div>`;
     setStyles();
-    setTimeout(() => page.innerHTML = '', 1500);
+    setTimeout(() => page.innerHTML = '', options.timeout);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    // todo добавить timeout в option
     showNotification(options);
 });
