@@ -16,7 +16,7 @@ const app = {
 
     methods: {
         setCoefficient(e) {
-            return this.coefficient = e.target.value;
+            this.coefficient = e.target.value;
         },
 
         getRate(value) {
@@ -28,7 +28,7 @@ const app = {
         },
 
         calculateSalary(e) {
-            return this.salary = this.getRate(e.target.value) * this.coefficient;
+            this.salary = this.getRate(e.target.value) * this.coefficient;
         }
     }
 }
