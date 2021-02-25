@@ -9,12 +9,13 @@
     <h4>What language do you program in?</h4>
 
     <p v-for="(value, language) in languages">
-        <input name="language" type="radio" v-on:input="setCoefficient" v-bind:value="value">
+        <input name="language" type="radio" v-model="coefficient" :value="value">
         {{ language }}
     </p>
 
-    <p>Experience? <input type="number" v-on:input="calculateSalary"></p>
-    <p v-if="salary">Your salary is ${{ salary }}</p>
+    <p>Experience? <input type="number" v-model="exp"></p>
+    <p v-if="coefficient && rate">Your salary is  ${{ calculateSalary }}</p>
+    <p v-else>Enter experience from "1..n"!</p>
 </div>
 
 <script src="https://unpkg.com/vue@next"></script>
