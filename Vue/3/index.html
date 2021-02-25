@@ -13,8 +13,8 @@
         {{ language }}
     </p>
 
-    <p>Experience? <input type="number" v-model="exp"></p>
-    <p v-if="coefficient && rate">Your salary is  ${{ calculateSalary }}</p>
+    <p>Experience? <input type="number" v-model="experience"></p>
+    <p v-if="coefficient && rate">Your salary is  ${{ salary }}</p>
     <p v-else>Enter experience from "1..n"!</p>
 </div>
 

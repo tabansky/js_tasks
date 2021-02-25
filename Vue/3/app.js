@@ -9,36 +9,21 @@ const app = {
                 4: 14000,
                 5: 15000
             },
-            salary: undefined,
-            rate: undefined,
-            exp: undefined,
+            experience: undefined,
             coefficient: undefined
         }
     },
 
-    methods: {
-        calculateRate() {
-            this.rate = this.exp < 1 ? null :
-                this.exp > 5 ? this.workExperiences[Object.keys(this.workExperiences).pop()] : this.workExperiences[this.exp];
-        }
-    },
-
     computed: {
-        calculateSalary() {
-            return this.salary = this.rate * this.coefficient;
-        }
-    },
-
-    watch: {
-        exp() {
-            if (this.exp > 0) {
-                this.calculateRate();
-            } else {
-                this.rate = null;
-            }
+        salary() {
+            return this.rate * this.coefficient;
         },
-    }
 
+        rate() {
+            return this.experience < 1 ? null :
+                this.experience > 5 ? this.workExperiences[Object.keys(this.workExperiences).pop()] : this.workExperiences[this.experience];
+        }
+    }
 }
 
 Vue.createApp(app).mount('#container');
