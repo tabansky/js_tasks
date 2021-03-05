@@ -20,8 +20,8 @@ const app = {
         },
 
         rate() {
-            return this.experience < 1 ? null :
-                this.experience > 5 ? this.workExperiences[Object.keys(this.workExperiences).pop()] : this.workExperiences[this.experience];
+            return this.experience < 1 ? null : this.experience > 5 ?
+                this.workExperiences[Object.keys(this.workExperiences).pop()] : this.workExperiences[this.experience];
         }
     }
 }

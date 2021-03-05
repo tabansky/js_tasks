@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+        }
+        #container div {
+            padding: 30px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th @click="++count" v-html="`Price ${arrow}`"></th>
+            </tr>
+            <tr v-for="product in sortPrice">
+                <td>{{ product.name }}</td><td>{{ product.price }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+        }
+        #container div {
+            padding: 30px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
 <div id="container">
+    <div>
+        <p><input v-model="checked" type="radio" value="one" checked> Show price</p>
 
+        <table>
+            <tr>
+                <th>Name</th>
+                <th v-show="checked === 'one'">Price</th>
+            </tr>
+            <tr v-for="product in catalog">
+                <td>{{ product.name }}</td><td v-show="checked === 'one'">{{ product.price }}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <p><input v-model="checked" type="radio" value="two"> Show price</p>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th v-if="checked === 'two'">Price</th>
+            </tr>
+            <tr v-for="product in catalog">
+                <td>{{ product.name }}</td><td v-show="checked === 'two'">{{ product.price }}</td>
+            </tr>
+        </table>
+    </div>
 </div>
 
 <script src="https://unpkg.com/vue@next"></script>
