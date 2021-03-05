@@ -1,29 +1,29 @@
 class Person {
     constructor(name, surname) {
-        this.name = name;
-        this.surname = surname;
+        this._name = name;
+        this._surname = surname;
     }
 
-    get getName() {
-        return this.name;
+    get name() {
+        return this._name;
     }
 
-    get getSurname() {
-        return this.surname;
+    get surname() {
+        return this._surname;
     }
 
-    set setName(name) {
-        this.name = name;
+    set name(name) {
+        this._name = name;
     }
 
-    set setSurname(surname) {
-        this.surname = surname;
+    set surname(surname) {
+        this._surname = surname;
     }
 }
 
 const worker = new Person('Иван', 'Иванов');
 
-console.log(worker.getName);
-console.log(worker.getSurname);
-console.log(worker.setName = 'Петр');
-console.log(worker.setSurname = 'Петров');
+console.log(worker.name);
+console.log(worker.surname);
+console.log(worker.name = 'Петр');
+console.log(worker.surname = 'Петров');
