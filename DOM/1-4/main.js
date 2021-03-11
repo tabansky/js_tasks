@@ -20,11 +20,11 @@ const createList = () => {
     const list = document.createElement('ol');
 
     const interval = setInterval(() => {
-        if (i > 20) clearInterval(interval);
-
         const li = document.createElement('li');
-        li.style.backgroundColor = i++ % 2 ? 'purple' : 'green';
+        li.style.backgroundColor = ++i % 2 ? 'purple' : 'green';
         list.append(li);
+
+        if (i === 20) clearInterval(interval);
     }, 2000);
 
     document.body.appendChild(list);
