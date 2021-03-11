@@ -14,23 +14,25 @@ const addStylizedButton = () => {
     document.body.appendChild(btn);
 }
 
-const addList = () => {
+
+const createList = () => {
+    let i = 0;
     const list = document.createElement('ol');
 
-    //todo каждые 2 сек, передалать for
-    for (let i = 1; i <= 20; i++) {
-        const li = document.createElement('li');
+    const interval = setInterval(() => {
+        if (i > 20) clearInterval(interval);
 
-        li.style.backgroundColor = i % 2 ? 'purple' : 'green';
+        const li = document.createElement('li');
+        li.style.backgroundColor = i++ % 2 ? 'purple' : 'green';
         list.append(li);
-    }
+    }, 2000);
 
     document.body.appendChild(list);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     changeBackGround();
-    addList();
+    createList();
     addStylizedButton();
     document.getElementById('orange').addEventListener('click', () => {
         document.body.style.backgroundColor = 'orange';
